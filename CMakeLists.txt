@@ -7,6 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project ("AZLAutopatcher")
 
+set(BUILD_SHARED_LIBS OFF)
+
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+
+set(CMAKE_EXE_LINKER_FLAGS "-static")
+
 # Add source to this project's executable.
 add_executable (AZLAutopatcher "AZLAutopatcher.cpp" "AZLAutopatcher.h")
 
